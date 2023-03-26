@@ -41,3 +41,8 @@ sudo chown -R www-data:www-data drawing-tracker
 
 # Set permissions
 sudo chmod -R 775 drawing-tracker
+
+# Ensure Livewire is configured to delete temporary files
+cd drawing-tracker
+
+php artisan livewire:configure-s3-upload-cleanup
